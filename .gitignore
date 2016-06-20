@@ -1,3 +1,13 @@
+.eslintrc
+.env
+mongod
+.c9/
+clementinejs/
+
+
+# Created by https://www.gitignore.io/api/node
+
+### Node ###
 # Logs
 logs
 *.log
