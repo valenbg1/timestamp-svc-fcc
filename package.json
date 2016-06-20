@@ -9,8 +9,6 @@
   },
   "bugs": "http://github.com/valenbg1/timestamp-svc-fcc/issues",
   "keywords": [
-    "MongoDB",
-    "Mongoose",
     "Full stack",
     "Express",
     "Node",
@@ -23,12 +21,7 @@
   "author": "Valentín Blanco",
   "license": "GPL-3.0",
   "dependencies": {
-    "dotenv": "^1.2.0",
     "express": "^4.12.4",
-    "express-session": "^1.11.3",
-    "mongoose": "^4.1.0",
-    "passport": "^0.3.0",
-    "passport-github": "^1.0.0",
     "strftime": "^0.9.2"
   }
 }

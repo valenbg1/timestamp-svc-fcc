@@ -1,8 +1,6 @@
 .eslintrc
 .env
-mongod
 .c9/
-clementinejs-fcc/
 
 
 # Created by https://www.gitignore.io/api/node
