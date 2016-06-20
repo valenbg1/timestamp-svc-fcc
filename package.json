@@ -9,11 +9,9 @@
   },
   "bugs": "http://github.com/valenbg1/timestamp-svc-fcc/issues",
   "keywords": [
-    "Full stack",
     "Express",
     "Node",
     "Javascript",
-    "Clementine"
   ],
   "scripts": {
     "start": "node server.js"

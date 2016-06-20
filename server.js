@@ -3,24 +3,15 @@ var app = express();
 var strftime = require("strftime");
 
 function getTime(str) {
-    var unixTime = ~~Number(str);
+    var unixTime = ~~Number(str) || Date.parse(str);
     
     if (unixTime)
         return new Date(unixTime);
-     
-    /*   
-    var natTime = new Date(str);
-    
-    if (natTime)
-        return natTime;
-    */
         
     return null;
 }
 
-function strDate(date) {
-    return strftime("%B %d, %Y", date);
-}
+app.use("/", express.static("public"));
 
 app.get("/:str",
     function(req, res) {
@@ -32,7 +23,7 @@ app.get("/:str",
         
         if (date) {
             ret.unix = date.getTime();
-            ret.natural = strDate(date);
+            ret.natural = strftime("%B %d, %Y", date);
         }
         
         res.writeHead(200, {"Content-Type": "application/json"});

@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Timestamp microservice</title>
+    </head>
+    
+    <body>
+        <h1>Timestamp microservice</h1>
+        
+        <table>
+            <tr><td>
+                <b>User Story:</b> <em>"I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)".</em>
+            </tr></td>
+            <tr><td>
+                <b>User Story:</b> <em>"If it does, it returns both the Unix timestamp and the natural language form of that date".</em>
+            </tr></td>
+            <tr><td>
+                <b>User Story:</b> <em>"If it does not contain a date or Unix timestamp, it returns null for those properties".</em>
+            </tr></td>
+        </table>
+        
+        <h2>Usage:</h2>
+            <code>http://timestamp-svc-fcc-valenbg1.c9users.io/-150</code><br>
+            <code>http://timestamp-svc-fcc-valenbg1.c9users.io/December,%2001,%201970</code>
+        
+        <h2>Example output:</h2>
+            <code>{"unix":28857600000,"natural":"December 01, 1970"}</code>
+    </body>
+</html>
