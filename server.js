@@ -3,10 +3,10 @@ var app = express();
 var strftime = require("strftime");
 
 function getTime(str) {
-    var unixTime = ~~Number(str) || Date.parse(str);
+    var ret = isNaN(str) ? new Date(Date.parse(str)) : new Date(+str);
     
-    if (unixTime)
-        return new Date(unixTime);
+    if (!isNaN(ret.getTime()))
+        return ret;
         
     return null;
 }
