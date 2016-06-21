@@ -11,7 +11,7 @@
   "keywords": [
     "Express",
     "Node",
-    "Javascript",
+    "Javascript"
   ],
   "scripts": {
     "start": "node server.js"
