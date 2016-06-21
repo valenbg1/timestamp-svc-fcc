@@ -5,10 +5,7 @@ var strftime = require("strftime");
 function getTime(str) {
     var ret = isNaN(str) ? new Date(Date.parse(str)) : new Date(+str);
     
-    if (!isNaN(ret.getTime()))
-        return ret;
-        
-    return null;
+    return isNaN(ret) ? null : ret;
 }
 
 app.use("/", express.static("public"));
@@ -32,6 +29,6 @@ app.get("/:str",
 
 var port = process.env.PORT || 8080;
 app.listen(port,
-    function () {
+    function() {
         console.log("Node.js listening on port " + port + "...");
     });
